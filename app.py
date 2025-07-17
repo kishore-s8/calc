@@ -12,8 +12,20 @@ def add():
         return {'error': 'Invalid input'}, 400
 
 @app.route('/')
-def health():
-    return 'Calculator API is running!'
+def hello():
+    # Return Hello World in multiple font styles using HTML
+    return '''
+    <html>
+        <head><title>Hello</title></head>
+        <body>
+            <h1 style="font-family: Arial;">Hello, World! (Arial)</h1>
+            <h1 style="font-family: Courier New;">Hello, World! (Courier New)</h1>
+            <h1 style="font-family: Georgia;">Hello, World! (Georgia)</h1>
+            <h1 style="font-family: Times New Roman;">Hello, World! (Times New Roman)</h1>
+            <h1 style="font-family: Verdana;">Hello, World! (Verdana)</h1>
+        </body>
+    </html>
+    '''
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=9090, need to modify to helloworld differnet fonts code
+    app.run(host='0.0.0.0', port=9090)
