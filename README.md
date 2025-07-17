@@ -7,3 +7,4 @@ secon change
 changes made to check tag
 changes made for timage ag to update
 check after change pull to always
+del deploy, svc and images for fresh
