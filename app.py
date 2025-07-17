@@ -1,4 +1,5 @@
-from flask import Flask, request
+
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
@@ -7,9 +8,9 @@ def add():
     try:
         a = float(request.args.get('a', 0))
         b = float(request.args.get('b', 0))
-        return {'result': a + b}
-    except:
-        return {'error': 'Invalid input'}, 400
+        return jsonify(result=a + b)
+    except ValueError:
+        return jsonify(error='Invalid input. Please provide numbers.'), 400
 
 @app.route('/')
 def health():
@@ -17,3 +18,4 @@ def health():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=9090)
+
