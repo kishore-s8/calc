@@ -6,3 +6,4 @@ Nextday change
 secon change
 changes made to check tag
 changes made for timage ag to update
+check after change pull to always
