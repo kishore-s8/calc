@@ -11,6 +11,8 @@
 # CMD ["python", "app.py"]
 
 FROM python:3.9-slim
+# Install sh or bash
+RUN apt-get update && apt-get install -y bash
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
